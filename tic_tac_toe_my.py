@@ -12,7 +12,7 @@ def choose_marker():
     whom=random.randint(1,2)
     while a != 'X' or a != 'O':
             a = input("Player {} choose your marker ('X'/'O'): ".format(whom))
-            if a == 'X':
+            if a == 'X' or a == 'x':
                 return [whom,'X', 'O']
             elif (a == 'O'):
                 return [whom,'O', 'X']
@@ -67,10 +67,10 @@ while True:
     ready=0
     while ready != 'Y' or ready != 'N':
             ready=input("Are You Ready To Play The Game(Y/N):  ")
-            if ready == 'N':
+            if ready == 'N' or ready == 'n':
                   game_on=False
                   break
-            elif ready=='Y':
+            elif ready=='Y' or ready =='y':
                 game_on=True
                 break
             else:
